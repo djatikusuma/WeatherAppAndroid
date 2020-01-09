@@ -22,36 +22,33 @@ android {
         applicationId "com.codekinian.wheaterapp"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode generateVersionCode()
+        versionName generateVersionName()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     dataBinding {
         enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        compileOptions {
-            sourceCompatibility = '1.8'
-            targetCompatibility = '1.8'
+    }
+    flavorDimensions 'server'
+    productFlavors {
+        dev {
+            dimension = 'server'
+            buildConfigField 'String', 'BASE_URL', '"http://api.openweathermap.org/data/2.5/"'
+            buildConfigField 'String', 'IMG_URL', '"http://api.openweathermap.org/img/wn/"'
+            buildConfigField 'String', 'API_KEY', '"7abfcf211659f5735e1e23a153d6cf3b"'
+            resValue "string", "authority", "com.codekinian.wheatherapp.authority"
+            resValue 'string', 'images_file_path', "Android/data/" + applicationId + "/files/Pictures"
         }
-        flavorDimensions 'server'
-        productFlavors {
-            dev {
-                dimension = 'server'
-                resValue "string", "authority", "com.codekinian.wheaterapp.authority"
-                resValue 'string', 'images_file_path', "Android/data/" + applicationId + "/files/Pictures"
-            }
-            prod {
-                dimension = 'server'
-                resValue "string", "authority", "com.codekinian.wheaterapp.authority"
-                resValue 'string', 'images_file_path', "Android/data/" + applicationId + "/files/Pictures"
-            }
-        }
-
     }
 }
 
