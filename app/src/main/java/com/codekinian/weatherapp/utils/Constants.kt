@@ -1,6 +1,6 @@
-package com.codekinian.wheaterapp.utils
+package com.codekinian.weatherapp.utils
 
-import com.codekinian.wheaterapp.BuildConfig
+import com.codekinian.weatherapp.BuildConfig
 
 class Constants {
     companion object {

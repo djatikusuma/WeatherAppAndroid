@@ -1,4 +1,4 @@
-package com.codekinian.wheaterapp
+package com.codekinian.weatherapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

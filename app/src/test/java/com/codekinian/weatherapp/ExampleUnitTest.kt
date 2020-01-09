@@ -1,4 +1,4 @@
-package com.codekinian.wheaterapp
+package com.codekinian.weatherapp
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

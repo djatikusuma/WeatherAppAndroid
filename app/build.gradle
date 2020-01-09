@@ -19,7 +19,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
     defaultConfig {
-        applicationId "com.codekinian.wheaterapp"
+        applicationId "com.codekinian.weatherapp"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode generateVersionCode()
@@ -43,10 +43,10 @@ android {
     productFlavors {
         dev {
             dimension = 'server'
-            buildConfigField 'String', 'BASE_URL', '"http://api.openweathermap.org/data/2.5/"'
-            buildConfigField 'String', 'IMG_URL', '"http://api.openweathermap.org/img/wn/"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.openweathermap.org/data/2.5/"'
+            buildConfigField 'String', 'IMG_URL', '"https://openweathermap.org/img/wn/"'
             buildConfigField 'String', 'API_KEY', '"7abfcf211659f5735e1e23a153d6cf3b"'
-            resValue "string", "authority", "com.codekinian.wheatherapp.authority"
+            resValue "string", "authority", "com.codekinian.weatherapp.authority"
             resValue 'string', 'images_file_path', "Android/data/" + applicationId + "/files/Pictures"
         }
     }
@@ -83,6 +83,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Glide dependency
+    def glide_version = "4.9.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
 }
 
 private Integer generateVersionCode() {
