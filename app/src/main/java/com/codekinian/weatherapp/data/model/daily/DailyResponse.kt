@@ -11,7 +11,7 @@ data class DailyResponse(
     @SerializedName("cod")
     val cod: String? = null,
     @SerializedName("list")
-    val list: List<ListClouds?>? = null,
+    val list: MutableList<ListClouds>? = null,
     @SerializedName("message")
     val message: Double? = null
 )

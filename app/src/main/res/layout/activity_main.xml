@@ -2,11 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
 
         <import type="com.codekinian.weatherapp.utils.Helpers" />
-
         <variable
             name="data"
             type="com.codekinian.weatherapp.view.main.MainViewModel" />
@@ -241,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
