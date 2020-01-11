@@ -13,7 +13,7 @@ object Helpers {
     @JvmStatic
     fun kelvinToCelcius(temp: String?): String =
         if (!temp.isNullOrEmpty()) {
-            val tempConvert = 273 - temp.toDouble()
+            val tempConvert = temp.toDouble() - 273
             round(tempConvert).toInt().toString()
         } else {
             "0"
@@ -51,6 +51,27 @@ object Helpers {
             }
         }
     }
+
+    @JvmStatic
+    fun getWeatherDay(type: String?): String =
+        if (!type.isNullOrEmpty()) {
+            when (type) {
+                "Rain" -> {
+                    "Hujan"
+                }
+                "Clouds" -> {
+                    "Berawan"
+                }
+                "Clear" -> {
+                    "Cerah"
+                }
+                else -> {
+                    "Cerah"
+                }
+            }
+        } else {
+            "-"
+        }
 
     @JvmStatic
     @BindingAdapter("android:src")

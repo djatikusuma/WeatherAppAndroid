@@ -23,6 +23,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@{Helpers.getWeatherDay(item.weather[0].main)}"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,7 +73,7 @@
                             android:gravity="end|top"
                             android:text="@{Helpers.convertLongToTime(item.dt.toString())}"
                             android:textColor="@android:color/holo_red_dark"
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             android:textStyle="bold" />
                     </TableRow>
                 </TableLayout>

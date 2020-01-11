@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Weather App</string>
-    <string name="label_temp">%1s \u2103</string>
+    <string name="label_temp">%1s\u2103</string>
     <string name="message_welcome">Hello, %1s %2s</string>
+    <string name="label_name">Nama Lengkap</string>
+    <string name="label_city">Kota</string>
+    <string name="label_next">Selanjutnya</string>
+    <string name="desc_welcome">Selamat datang di aplikasi Weather, masukkan Nama Lengkap dan Kota Anda saat ini.</string>
 </resources>
